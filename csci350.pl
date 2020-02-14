@@ -34,5 +34,7 @@ true if N is the minimum of the numbers in L1 that are larger than the smallest 
 If there is no number in L2, all the numbers in L1 should be used to calculate the minimum. If
 there is no number in L1 larger than the smallest number in L2, the predicate is false. **/
 
+min-above-min([A], [], A) :-
+    number(A).
 
     
