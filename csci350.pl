@@ -21,4 +21,8 @@ sum-up-numbers-general([H|T], N) :-
     sum-up-numbers-general(T, Rem),
     sum-up-numbers-general(H, HeadSum),
     N is Rem + HeadSum.
+sum-up-numbers-general([H|T], N) :- %check if number
+    number(H),
+    sum-up-numbers-general(T, Remainder),
+    N is Remainder + H. 
     
