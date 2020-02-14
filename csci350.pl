@@ -18,7 +18,7 @@ numbers (including those in nested lists) in L. If there are no such numbers, th
 sum-up-numbers-general([], 0). %check if head is list
 sum-up-numbers-general([H|T], N) :-
     is_list(H),
-    sum-up-numbers-general(T, Remainder),
+    sum-up-numbers-general(T, Rem),
     sum-up-numbers-general(H, HeadSum),
-    N is Remainder + HeadSum.
+    N is Rem + HeadSum.
     
