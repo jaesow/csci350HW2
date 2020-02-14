@@ -8,3 +8,5 @@ sum-up-numbers-simple([H|T], N) :-
     number(H),
     sum-up-numbers-simple(T, Rem),
     N is H + Rem.
+sum-up-numbers-simple([_|T], N) :-
+    sum-up-numbers-simple(T, N).  
