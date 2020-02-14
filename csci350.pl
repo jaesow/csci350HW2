@@ -26,5 +26,13 @@ sum-up-numbers-general([H|T], N) :- %check if number
     sum-up-numbers-general(T, Remainder),
     N is Remainder + H. 
 sum-up-numbers-general([_|T], N) :- %if not list or number
-    sum-up-numbers-general(T, N).   
+    sum-up-numbers-general(T, N). 
+
+/** Write a predicate min-above-min(L1, L2, N). L1 and L2 are both simple lists,
+which do not contain nested lists. Both lists may have non-numeric elements. The predicate is
+true if N is the minimum of the numbers in L1 that are larger than the smallest number in L2.
+If there is no number in L2, all the numbers in L1 should be used to calculate the minimum. If
+there is no number in L1 larger than the smallest number in L2, the predicate is false. **/
+
+
     
