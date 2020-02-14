@@ -25,4 +25,6 @@ sum-up-numbers-general([H|T], N) :- %check if number
     number(H),
     sum-up-numbers-general(T, Remainder),
     N is Remainder + H. 
+sum-up-numbers-general([_|T], N) :- %if not list or number
+    sum-up-numbers-general(T, N).   
     
