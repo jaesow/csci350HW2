@@ -20,3 +20,5 @@ sum-up-numbers-general([H|T], N) :-
     is_list(H),
     sum-up-numbers-general(T, Remainder),
     sum-up-numbers-general(H, HeadSum),
+    N is Remainder + HeadSum.
+    
