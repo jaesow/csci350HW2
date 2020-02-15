@@ -48,3 +48,14 @@ min-above-min([H|T], L2, H) :-
 min-above-min([_|T], L2, Ans) :-
     min-above-min(T, L2, Ans).
     
+    /**Write a predicate common-unique-elements(L1,L2,N). L1 and L2 are both
+general lists, which may contain nested lists. The predicate is true if N is a simple list (i.e. a list 
+without sub-lists) of the items that appear in both L1 and L2 (including the sub-lists within).
+The elements in the result list must be unique. **/
+
+common-unique-elements([], _, []).
+common-unique-elements([H|T], L2, [H|Tail]) :- 
+    not(is-member(H, T)),
+    is-member(H, L2),
+    common-unique-elements(T, L2, Tail).
+    
