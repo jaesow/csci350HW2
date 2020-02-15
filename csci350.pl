@@ -36,5 +36,10 @@ there is no number in L1 larger than the smallest number in L2, the predicate is
 
 min-above-min([A], [], A) :-
     number(A).
-
+    
+min-above-min(L1, L2, N) :- %if list 2 is empty return the min of list one
+    length(L2, 0),
+    min-val(L1, N).
+min-above-min([H|T], L2, H) :-   
+    number(H),
     
