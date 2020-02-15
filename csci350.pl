@@ -42,4 +42,9 @@ min-above-min(L1, L2, N) :- %if list 2 is empty return the min of list one
     min-val(L1, N).
 min-above-min([H|T], L2, H) :-   
     number(H),
+     min-val(L2, MinL),
+     MinL < H,
+    bigger-num(T, MinL, H, H).
+min-above-min([_|T], L2, Ans) :-
+    min-above-min(T, L2, Ans).
     
