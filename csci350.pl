@@ -65,3 +65,6 @@ common-unique-elements([H|T], L2, [H|Tail]) :-
     common-unique-elements(T, L2, Tail),
     append(Nested, Tail, ConcatList). 
     
+ common-unique-elements([_|T], L2, Tail) :-
+    common-unique-elements(T, L2, Tail).
+    
